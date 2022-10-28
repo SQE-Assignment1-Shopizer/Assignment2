@@ -1,7 +1,7 @@
-# Assignment2
+# ReactStoreFront
 
 
-Meeting 1: 
+## Meeting 1: 
 Date: 24/10/2022
 Venue: On Campus Meeting
 
