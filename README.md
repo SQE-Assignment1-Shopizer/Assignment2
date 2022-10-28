@@ -6,13 +6,13 @@
 ### Venue: On Campus Meeting
 
 ### Participants:
-Fizza Sajjad
-Maheen Arif
-Fatima Siddiqui
+>*Fizza Sajjad
+>*Maheen Arif
+>*Fatima Siddiqui
 
 ### Meeting Notes: 
--> Understanding GitHub
--> Understanding NightWatch
+>* Understanding GitHub
+>* Understanding NightWatch
 
 ## Meeting 2:
 Date: 26/10/2022
@@ -24,9 +24,9 @@ Maheen Arif
 Fatima Siddiqui
 
 ### Meeting Notes: 
--> Understanding of Codecept
--> Working on UI test cases using codecept
--> Assigned work deadline i.e. 28/10/22
+>* Understanding of Codecept
+>* Working on UI test cases using codecept
+>* Assigned work deadline i.e. 28/10/22
 
 ## Meeting 3:
 ### Date: 28/10/2022
@@ -39,6 +39,6 @@ Fatima Siddiqui
 
 
 ### Meeting Notes: 
--> Completion of UI Testing
--> Discussion of API
--> API understanding
+>* Completion of UI Testing
+>* Discussion of API
+>* API understanding
