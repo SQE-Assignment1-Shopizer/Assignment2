@@ -6,9 +6,9 @@
 ### Venue: On Campus Meeting
 
 ### Participants:
->*Fizza Sajjad
->*Maheen Arif
->*Fatima Siddiqui
+*Fizza Sajjad
+*Maheen Arif
+*Fatima Siddiqui
 
 ### Meeting Notes: 
 >* Understanding GitHub
