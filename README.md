@@ -2,43 +2,43 @@
 
 
 ## Meeting 1: 
-Date: 24/10/2022
-Venue: On Campus Meeting
+### Date: 24/10/2022
+### Venue: On Campus Meeting
 
-Participants:
+### Participants:
 Fizza Sajjad
 Maheen Arif
 Fatima Siddiqui
 
-Meeting Notes: 
+### Meeting Notes: 
 -> Understanding GitHub
 -> Understanding NightWatch
 
-Meeting 2:
+## Meeting 2:
 Date: 26/10/2022
 Venue: Online Google Meet
 
-Participants
+### Participants
 Fizza Sajjad
 Maheen Arif
 Fatima Siddiqui
 
-Meeting Notes: 
+### Meeting Notes: 
 -> Understanding of Codecept
 -> Working on UI test cases using codecept
 -> Assigned work deadline i.e. 28/10/22
 
-Meeting 3:
-Date: 28/10/2022
-Venue: Online Google Meet
+## Meeting 3:
+### Date: 28/10/2022
+### Venue: Online Google Meet
 
-Participants
+### Participants
 Fizza Sajjad
 Maheen Arif
 Fatima Siddiqui
 
 
-Meeting Notes: 
+### Meeting Notes: 
 -> Completion of UI Testing
 -> Discussion of API
 -> API understanding
