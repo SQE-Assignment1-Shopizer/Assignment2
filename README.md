@@ -26,4 +26,19 @@ Fatima Siddiqui
 Meeting Notes: 
 -> Understanding of Codecept
 -> Working on UI test cases using codecept
--> Assigned work deadline i.e. 27/10/22
+-> Assigned work deadline i.e. 28/10/22
+
+Meeting 3:
+Date: 28/10/2022
+Venue: Online Google Meet
+
+Participants
+Fizza Sajjad
+Maheen Arif
+Fatima Siddiqui
+
+
+Meeting Notes: 
+-> Completion of UI Testing
+-> Discussion of API
+-> API understanding
