@@ -1,23 +1,49 @@
-//ClearAllFilterSteps
+//Add to Cart
 const { I } = inject();
 
-Given('I am on {string} category page',(product)  => {
+Given('I am on {string} details page',(product)  => {
  
 I.amOnPage(product);
 
+
 });
 
-Given('I select {string} filter',(color)  => {
+Given('I select {string}',(color)  => {
   
-I.click(color);
+  if(color != '')
+    {
+      I.click(color);
+    }
+
+
 });
 
-When('I click clear all button', () => {
+Given('I select {string}',(size)  => {
   
-  I.click("//body/div[@id='__next']/main[1]/div[1]/div[2]/div[1]/div[1]");
+  if(size != '')
+    {
+      I.click(size);
+    }
+ 
+  
+  });
+
+  Given('I select {string}',(quantity)  => {
+
+    if(quantity != '')
+    {
+      I.click(quantity);
+    }
+    
+    
+    });
+  
+When('I click on Add to Cart Button', () => {
+  
+  I.click("//body[1]/div[1]/main[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]/div[4]/button[1]"); 
 });
 
-Then('I dont see clear all button on the filters', () => {
-  
-  I.dontSee("//button[contains(text(),'clear all')]");
+Then('a message should be displayed', () => {
+  I.wait(5);
+  I.see('Item added to cart');
 });
