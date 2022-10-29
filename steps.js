@@ -1,23 +1,16 @@
-//ClearAllFilterSteps
 const { I } = inject();
+// Add in your custom step files
 
-Given('I am on {string} category page',(product)  => {
- 
-I.amOnPage(product);
-
+Given('I am on {string} page', (page) => {
+  // TODO: replace with your own step
+  I.amOnPage(page);
 });
 
-Given('I select {string} filter',(color)  => {
-  
-I.click(color);
+When('I click {string} button', (category) => {
+  I.click(category);
 });
 
-When('I click clear all button', () => {
+Then('I see its {string} category', (subcategory) => {
   
-  I.click("//body/div[@id='__next']/main[1]/div[1]/div[2]/div[1]/div[1]");
-});
-
-Then('I dont see clear all button on the filters', () => {
-  
-  I.dontSee("//button[contains(text(),'clear all')]");
+  I.see(subcategory);
 });
