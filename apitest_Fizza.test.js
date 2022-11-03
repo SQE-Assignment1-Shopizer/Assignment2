@@ -31,16 +31,15 @@ it('Get all tasks where userId is 1' , async() => {
 });
 
 
-it('Set all tasks where to do   idis 1 to completed', async () => {
+it('Set all tasks where todo id is 1 to completed', async () => {
     const response = await request.put('todos/1').send({ completed: true });
     expect(response.statusCode).toBe(200)
     console.log(response.body);
     expect(response.body).toMatchObject({completed: true, id: 1})
 });
 
-it('Delete  tasks where userId is 1', async () => {
+it('Delete  tasks where tpdo id is 1', async () => {
     const response = await request.delete('todos/1')
-
     expect(response.statusCode).toBe(200);
     expect(response.body).toMatchObject({});
 })
