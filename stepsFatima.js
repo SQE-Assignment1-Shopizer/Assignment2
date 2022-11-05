@@ -13,4 +13,4 @@ When('I click {string} button', (category) => {
 Then('I see its {string} category', (subcategory) => {
   
   I.see(subcategory);
-});
+
