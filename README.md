@@ -42,3 +42,17 @@ Fatima Siddiqui
 >* Completion of UI Testing
 >* Discussion of API
 >* API understanding
+
+## Meeting 4:
+### Date: 4/11/2022
+### Venue: Online Google Meet
+
+### Participants
+Fizza Sajjad
+Maheen Arif
+Fatima Siddiqui
+
+
+### Meeting Notes: 
+>* Installation of Jest
+>* Divided Tasks
