@@ -1,0 +1,93 @@
+Example 1:
+
+***********************************************************************
+
+import React from 'react'
+import { mount } from 'enzyme'
+import Spacer from 'react-storefront/Spacer'
+
+describe('Spacer', () => {
+  let wrapper
+
+  afterEach(() => {
+    wrapper.unmount()
+  })
+
+  it('should render component', () => {
+    wrapper = mount(<Spacer />)
+
+    expect(wrapper.find(Spacer).exists()).toBe(true)
+  })
+})
+
+***********************************************************************
+The code written above is used to test spacers!!
+
+Step1: Importing required files
+Step2: Create desribe class and write all related test cases in it
+Step3: Initialize required variables, eg wrapper in this case
+Step4: Declare the steps, what will happen after each test case, eg unmounting in this case
+Step5: Declare it function
+Step6: In your own words, desrcibe what the function will do
+Step7: Define what the test will do, eg mounting in this case
+Step7: Write what is expected of the test case, eg in this case we check if the spacer exists or not
+
+
+
+
+
+
+
+
+
+Example 2:
+
+***********************************************************************
+
+import React from 'react'
+import { mount } from 'enzyme'
+import Breadcrumbs from 'react-storefront/Breadcrumbs'
+import { Typography, Container } from '@mui/material'
+
+describe('Breadcrumbs', () => {
+  let wrapper
+
+  afterEach(() => {
+    wrapper.unmount()
+  })
+
+  it('should render empty span when no items provided', () => {
+    wrapper = mount(<Breadcrumbs items={null} />)
+
+    expect(wrapper.find(Container).children.length).toBe(1)
+  })
+
+  it('should apply bold style to last item', () => {
+    const items = [{ text: 'test1' }, { text: 'test2' }]
+    wrapper = mount(<Breadcrumbs items={items} />)
+
+    expect(
+      wrapper
+        .findWhere(item => item.type() === 'span' && item.text() === 'test2')
+        .prop('className'),
+    ).toContain('current')
+  })
+
+  it('should render items with href as a link', () => {
+    const items = [{ text: 'test1', href: '/test' }]
+    wrapper = mount(<Breadcrumbs items={items} />)
+
+    expect(wrapper.find('a').text()).toBe('test1')
+  })
+})
+
+*************************************************************************
+
+Step1: Importing required files
+Step2: Create desribe class and write all related test cases in it
+Step3: Initialize required variables, eg wrapper in this case
+Step4: Declare the steps, what will happen after each test case, eg unmounting in this case
+Step5: Declare it functions, as many as needed, eg 3 in this case
+Step6: In your own words, desrcibe what the function will do in bracket and ' '
+Step7: Define what the test will do, eg test definitions in this case are what to do when no items are provided, is the recent span bold and do they all contain hrefs as links
+Step7: Write what is expected of the test case, eg in this case length is 1 of breadcrumbs, current span is bold and links contain hrefs
