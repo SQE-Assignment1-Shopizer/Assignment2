@@ -11,67 +11,39 @@ Page Data is the data that the API must return to the page being displayed while
 
 
 
-For Example:
+Explanation of the code.
 
-describe('addVersion', () => {
+import getAPIURL from '../../src/api/getAPIURL'
+
+describe('getAPIURL', () => {
   beforeEach(() => {
     window.__NEXT_DATA__ = {
-      buildId: 'development',
+      buildId: '1',
     }
   })
   
-  
-  developement is appended to all requests.
-  
-  
-  
-   afterEach(() => {
+  (This appends the build id 1 to all the requests to ensure that the previous cache is not served to the current version of the application to prevent errors when breaking challenges are introduced in the API)
+
+  afterEach(() => {
     delete window.__NEXT_DATA__
   })
   
-  After all test cases are done the delete window._NEXT_DATA__  deletes it 
-  
-  
-  
-   it('should add the version query param', () => {
-    expect(addVersion('/foo').toString()).toBe('http://localhost/foo?__v__=development')
-  })
-  
-  
-  
-  This piece of code checks the url to be http://localhost/foo?__v__=development
+   (This deletes all the data returned from window.__NEXT_DATA__  after executing all the testcases)
 
-  it('should accept a URL', () => {
-    expect(addVersion(new URL('/foo', window.location.href)).toString()).toBe(
-      'http://localhost/foo?__v__=development',
-    )
-  })
-  
-  
-  here window.location.href returns the full url and checks it to be equal to  'http://localhost/foo?__v__=development'.
-
-  it('should return the original url if it is falsy', () => {
-    expect(addVersion()).toBeUndefined()
-  })
-  
-  
-  when the url is falsy then it should return undefined.
-
-  it('should not duplicate the version query param', () => {
-    expect(addVersion('/foo?__v__=1').toString()).toBe('http://localhost/foo?__v__=1')
+  it('should append __NEXT_DATA__.buildId to the query string', () => {
+    expect(getAPIURL('/foo')).toBe('/api/foo?__v__=1')
   })
 
-This test checks if the original hostname is the same.
+ (This checks that the build id is appended to the url)
+ 
+ 
+  
 
-  it('should leave the original hostname intact', () => {
-    expect(addVersion('http://localhost/foo').toString()).toBe(
-      'http://localhost/foo?__v__=development',
-    )
+  it('should not append __NEXT_DATA__.buildId if __NEXT_DATA__ is undefined', () => {
+    delete window.__NEXT_DATA__
+    expect(getAPIURL('/foo')).toBe('/api/foo')
   })
-  
-  
-  
-  
-  
-  
-  
+})
+
+
+(If the _NEXT_DATA__ is undefined then it should not be appended.
